@@ -16,9 +16,20 @@ import org.openqa.selenium.json.JsonOutput;
  * Не забывайте присваивать вновь создаваемые объекты cсылке базового типа и работать только с ними.
  */
 public class InterfaceExamplesMain {
-    Boat b = new Boat();
+    public static void main(String[] args) {
 
-    Car car = new Car();
 
-    Plane p = new Plane();
+        Boat b = new Boat("red",5000);
+         b.beep();
+        System.out.println(b);
+        Car car = new Car("Tesla",2.0);
+        car.startEngine();
+        System.out.println(car);
+        Plane p = new Plane("МРIЯ",2019);
+        p.beep();
+        p.startEngine();
+        p.brake();
+        p.repairEngine();
+        System.out.println(p);
+    }
 }

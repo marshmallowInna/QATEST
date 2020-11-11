@@ -22,4 +22,8 @@ public class Primate extends Mammal {
         System.out.println(" Class Primate eat");
     }
 
+    @Override
+    public String toString() {
+        return "Primate{} " + super.toString();
+    }
 }

@@ -2,12 +2,12 @@ package interfaces;
 
 public class Car implements Vehicle {
     String model;
-    double volume;
+    float volume;
 
     public Car() {
     }
 
-    public Car(String model, double volume) {
+    public Car(String model, float volume) {
         this.model = model;
         this.volume = volume;
     }
@@ -24,7 +24,7 @@ public class Car implements Vehicle {
         return volume;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(float volume) {
         this.volume = volume;
     }
 

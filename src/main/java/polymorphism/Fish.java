@@ -24,4 +24,9 @@ public class Fish extends Animal {
         System.out.println(" Class Fish eat");
 
     }
+
+    @Override
+    public String toString() {
+        return "Fish{} " + super.toString();
+    }
 }

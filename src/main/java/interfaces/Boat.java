@@ -2,12 +2,12 @@ package interfaces;
 
 public class Boat implements Vehicle {
    private String color;
-   private int massBoat;
+   private double massBoat;
 
    public Boat() {
    }
 
-   public Boat(String color, int massBoat) {
+   public Boat(String color, double massBoat) {
       this.color = color;
       this.massBoat = massBoat;
    }
@@ -20,7 +20,7 @@ public class Boat implements Vehicle {
       this.color = color;
    }
 
-   public int getMassBoat() {
+   public double getMassBoat() {
       return massBoat;
    }
 

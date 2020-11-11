@@ -1,5 +1,7 @@
 package polymorphism;
 
+import java.util.Arrays;
+
 /*
  * Task:
  * Override methods in each class to represent the behavior of a specific animal.
@@ -17,7 +19,11 @@ public class NatureMain {
             animal.move();
             animal.eat();
             animal.makeSound();
+            System.out.println(animal.toString());
+
         }
+
+
     }
     
     public static Animal[] getArrayOfAnimals() {
@@ -33,4 +39,5 @@ public class NatureMain {
         
         return animals;
     }
+
 }

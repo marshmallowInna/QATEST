@@ -1,38 +1,38 @@
 package interfaces;
 
 public class Plane implements Vehicle {
-    String wwwww;
-    double yyy;
+    String name;
+    double age;
 
     public Plane() {
     }
 
-    public Plane(String wwwww, double yyy) {
-        this.wwwww = wwwww;
-        this.yyy = yyy;
+    public Plane(String name, double age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public String getWwwww() {
-        return wwwww;
+    public String getName() {
+        return name;
     }
 
-    public void setWwwww(String wwwww) {
-        this.wwwww = wwwww;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getYyy() {
-        return yyy;
+    public double getAge() {
+        return age;
     }
 
-    public void setYyy(double yyy) {
-        this.yyy = yyy;
+    public void setAge(double age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
         return "Plane{" +
-                "wwwww='" + wwwww + '\'' +
-                ", yyy=" + yyy +
+                "name='" + name + '\'' +
+                ", age=" + age +
                 '}';
     }
 

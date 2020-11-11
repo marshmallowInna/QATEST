@@ -20,7 +20,7 @@ public class Car implements Vehicle {
         this.model = model;
     }
 
-    public double getVolume() {
+    public float getVolume() {
         return volume;
     }
 

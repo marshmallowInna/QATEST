@@ -22,7 +22,7 @@ public class InterfaceExamplesMain {
         Boat b = new Boat("red",5000);
          b.beep();
         System.out.println(b);
-        Car car = new Car("Tesla",2.0);
+        Car car = new Car("Tesla",4000);
         car.startEngine();
         System.out.println(car);
         Plane p = new Plane("МРIЯ",2019);

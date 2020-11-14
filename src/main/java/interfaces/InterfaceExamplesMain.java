@@ -18,8 +18,17 @@ import org.openqa.selenium.json.JsonOutput;
 public class InterfaceExamplesMain {
     public static void main(String[] args) {
 
+        beep(new Boat());
+        beep(new Car());
+        beep(new Plane());
+    }
 
-        Boat b = new Boat("red",5000);
+    public static void beep(Vehicle vehicle) {
+        vehicle.beep();
+    }
+    }
+
+     /*   Boat b = new Boat("red",5000);
          b.beep();
         System.out.println(b);
         Car car = new Car("Tesla",4000);
@@ -32,4 +41,4 @@ public class InterfaceExamplesMain {
         p.repairEngine();
         System.out.println(p);
     }
-}
+}*/

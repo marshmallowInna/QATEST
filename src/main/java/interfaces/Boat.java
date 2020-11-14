@@ -38,13 +38,13 @@ public class Boat implements Vehicle {
 
    @Override
    public void startEngine() {
-      System.out.println("Class Boat starEngine");
+      System.out.println("Class Boat starEngine" + this.color + this.massBoat);
 
    }
 
    @Override
    public void brake() {
-      System.out.println(" Class Boat brake");
+      System.out.println(" Class Boat brake" + this.massBoat + this.color);
    }
 
    @Override

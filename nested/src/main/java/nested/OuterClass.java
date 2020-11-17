@@ -27,7 +27,34 @@ public class OuterClass {
         }
 
     }
+/* class SomeClass { // вложили в метод клаасс и новый метод ч
 
+    int IntParam = 100;
+
+    public SomeClass(int intParam) {
+        IntParam = intParam;
+    }
+
+    public void show() {
+        SomeClass someClass = new SomeClass(555);
+        someClass.show();
+        final int xxx = 1;
+        System.out.println(" Hi from someClass" );
+        class AnotherClass{
+            public void anotherMethod(){
+                System.out.println(xxx); // доступ к перем внешн клсса
+                System.out.println(IntField);
+                System.out.println(field1);
+                AnotherClass anotherObj = new AnotherClass(); // создали обьект класса
+               // show(anotherMethod()); // тут методу перед этот  обьект
+                System.out.println("OuterClass" + field1 + IntField + "is show");
+              //  private void test(SomeClass someClas){ можем ли мы передать в качестве аргументав др метод ???
+
+
+        }
+
+    }
+}*/
     @Override
     public String toString() {
         return "OuterClass{" +
@@ -41,6 +68,7 @@ public class OuterClass {
         OuterClass.InnerClass innerClass = new OuterClass.InnerClass();
         System.out.println(outerClass.toString());
         innerClass.run();
+
         // your code here
     }
 }

@@ -43,6 +43,7 @@ public class LocalClass {
 
         // your code here
          return 0.0;
+
     }
 
 

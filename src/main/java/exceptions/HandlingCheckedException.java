@@ -29,36 +29,27 @@ public class HandlingCheckedException {
 
         Path fullFilePath = folderPath.resolve(fileName);
         BufferedReader reader = null;
-
-        try {
-            reader = newBufferedReader(fullFilePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         String nextLine = null;
 
         try {
+            reader = newBufferedReader(fullFilePath);
             nextLine = reader.readLine();
+            while (nextLine != null) {
+                System.err.println(nextLine);
+                nextLine = reader.readLine();
+            }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        // System.err.println(" uuuuuu");
-        while (nextLine != null) {
-            System.err.println(nextLine);
+        } finally {
             try {
-                nextLine = reader.readLine();
+                reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
-
-            } finally {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.err.println(" Entering finally block ");
             }
         }
+
+        // System.err.println(" uuuuuu");
+
     }
 }
 

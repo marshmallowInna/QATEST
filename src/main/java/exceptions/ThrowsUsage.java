@@ -34,11 +34,12 @@ public class ThrowsUsage {
     }
 
     private static void outputContentOfFile(Path fullFilePath) throws IOException {
-                                                                                                                                                                                                    BufferedReader reader = Files.newBufferedReader(fullFilePath);
-        String nextLine = reader.readLine();
-        while (nextLine != null) {
-            System.out.println(nextLine);
-            nextLine = reader.readLine();
+        BufferedReader reader = Files.newBufferedReader(fullFilePath); {
+            String nextLine = reader.readLine();
+            while (nextLine != null) {
+                System.out.println(nextLine);
+                nextLine = reader.readLine();
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 package io.github.valentyn.nahai.exceptions;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,10 +19,15 @@ public class ThrowingCustomException {
             System.out.print("Are you a student? ");
             boolean isStudent = scanner.nextBoolean(); 
         } catch (InputMismatchException ex) {
-            System.err.println("");
-        } catch (IncorrectDataFormatException e){
-            System.out.println(" input IncorrectDataFormatException");
+            System.err.println("Mismatch");
+            try {
+                throw new IncorrectDataFormatException();
+            } catch (RuntimeException e) {
+                System.err.println("IncorrectDataFormatException");
+                //e.printStackTrace();
+            }
             // you code here
+
         }
     }
 }

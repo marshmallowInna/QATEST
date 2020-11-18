@@ -28,13 +28,16 @@ public class ThrowsUsage {
         Path fullFilePath = folderPath.resolve(fileName);
         try {
             outputContentOfFile(fullFilePath);
+            throw new Error();
         } catch (IOException e) {
             e.printStackTrace();
+        }catch (Error e){
+            System.out.println(" error");
         }
     }
 
     private static void outputContentOfFile(Path fullFilePath) throws IOException {
-        BufferedReader reader = Files.newBufferedReader(fullFilePath); {
+        BufferedReader reader = Files.newBufferedReader(fullFilePath);
             String nextLine = reader.readLine();
             while (nextLine != null) {
                 System.out.println(nextLine);
@@ -42,4 +45,4 @@ public class ThrowsUsage {
             }
         }
     }
-}
+

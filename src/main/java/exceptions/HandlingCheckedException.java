@@ -29,7 +29,7 @@ public class HandlingCheckedException {
 
         Path fullFilePath = folderPath.resolve(fileName);
         BufferedReader reader = null;
-        String nextLine = null;
+        String nextLine = null ;
 
         try {
             reader = newBufferedReader(fullFilePath);

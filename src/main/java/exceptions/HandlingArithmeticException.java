@@ -12,7 +12,7 @@ package exceptions;
 public class HandlingArithmeticException {
     public static void main(String[] args) {
         try {
-            final int dividend = 6;
+            final int dividend = 8;
             final int divisor = 0;
             final int quotient = dividend / divisor;
 

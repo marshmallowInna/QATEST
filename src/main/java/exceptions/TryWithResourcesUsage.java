@@ -25,12 +25,15 @@ public class TryWithResourcesUsage {
         String fileName = scanner.nextLine();
 
         Path fullFilePath = folderPath.resolve(fileName);
-        BufferedReader reader = Files.newBufferedReader(fullFilePath);
+        try (BufferedReader reader = Files.newBufferedReader(fullFilePath)) {
 
-        String nextLine = reader.readLine();
-        while (nextLine != null) {
-            System.out.println(nextLine);
-            nextLine = reader.readLine();
+            String nextLine = reader.readLine();
+            while (nextLine != null) {
+                System.out.println(nextLine);
+                nextLine = reader.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 }

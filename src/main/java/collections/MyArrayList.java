@@ -24,6 +24,7 @@ public class MyArrayList {
         list2.add("50");
         list2.add("60");
         list2.add("70");
+        list2.add("80");
 
         Iterator itr =list2.iterator();
         System.out.println("Iterator: " + itr.toString());
